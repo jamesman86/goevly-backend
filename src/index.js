@@ -6,7 +6,10 @@ const app = express()
 
 // Middlewares
 app.use(cors({
-  origin: '*',
+  origin: [
+    'http://localhost:8080',
+    'https://goevly-frontend-production.up.railway.app'
+  ],
   credentials: true
 }))
 app.use(express.json())
